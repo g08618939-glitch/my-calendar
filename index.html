@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的万年历</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">我的历法工具</p>
+        <h1>万年历</h1>
+        <p class="subtitle">公历 · 农历 · 节气 · 节日 · 每日宜忌</p>
+      </div>
+      <button id="todayBtn" class="today-btn">回到今天</button>
+    </header>
+
+    <section class="today-card" id="todayCard"></section>
+
+    <section class="calendar-card">
+      <div class="calendar-toolbar">
+        <button id="prevBtn" aria-label="上个月">‹</button>
+        <h2 id="monthTitle"></h2>
+        <button id="nextBtn" aria-label="下个月">›</button>
+      </div>
+      <div class="selects">
+        <select id="yearSelect" aria-label="年份"></select>
+        <select id="monthSelect" aria-label="月份"></select>
+      </div>
+      <div class="weekdays"><span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span></div>
+      <div id="calendar" class="calendar-grid"></div>
+    </section>
+
+    <section class="detail-card" id="detailCard"></section>
+
+    <footer>我的万年历 · 数据仅供民俗文化参考</footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/lunar-javascript@1.6.12/lunar.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
